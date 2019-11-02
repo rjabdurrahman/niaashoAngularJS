@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OnCurt</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<style>
+</style>
+
+<body>
+    <div class="w3-bar w3-light-grey" style="display: flex;padding-top:5px;">
+        <a class="w3-bar-item w3-button">
+            <i class="fa fa-gift" style="font-size:26px"></i>
+        </a>
+        <span style="font-size: 25px;vertical-align: middle;">NiaAsho (নিয়ে আসো)</span>
+    </div>
+    <div class="w3-bar w3-light-grey w3-border" style="display: flex">
+        <a id="catBtn" class="w3-bar-item w3-button">
+            <i class="fa fa-align-justify" style="font-size:24px"></i>
+        </a>
+        <input type="text" class="w3-bar-item w3-input w3-white" style="width: 100%;overflow: hidden;" placeholder="Search..">
+        <a href="#" class="w3-bar-item w3-button">
+            <i class="fa fa-search" style="font-size:24px"></i>
+        </a>
+    </div>
+    <ul id="catUl" class="w3-ul w3-border w3-white cat-nav">
+        <li>
+            <i class="fa fa-minus" style="font-size:14px"></i> CATEGORIES
+        </li>
+        <li>
+            <a>
+                <i class="fa fa-plus" style="font-size:14px"></i> Wemen Fashion</a>
+            <ul class="w3-ul">
+                <li>Payel</li>
+                <li>Churi</li>
+                <li>Ghona</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#electronics">
+                <i class="fa fa-plus" style="font-size:14px"></i> Electronics
+                <ul class="w3-ul">
+                    <li>Mobile</li>
+                    <li>TV</li>
+                    <li>Freeze</li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <i class="fa fa-plus" style="font-size:14px"></i> Mobile</li>
+    </ul>
+    <div class="w3-content w3-display-container" style="max-width:800px;position: relative;">
+        <img class="mySlides" src="img/img_nature_wide.jpg" style="width:100%">
+        <img class="mySlides" src="img/img_snow_wide.jpg" style="width:100%">
+        <img class="mySlides" src="img/img_mountains_wide.jpg" style="width:100%">
+        <div class="w3-center w3-container w3-section w3-large w3-text-white" style="width:100%;position: absolute;bottom: 0;">
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
+    </div>
+    <!-- Route View -->
+    <ng-view></ng-view>
+    <div class="w3-bar w3-light-grey w3-border bottom-fix" style="display: flex;">
+        <a href="#" class="w3-bar-item w3-button">
+            <i class="fa fa-comment" style="font-size:30px"></i>
+        </a>
+        <button class="w3-button w3-block w3-border" style="margin-right: 60px;font-size: 18px">Place Order</button>
+        <a href="#" class="w3-bar-item w3-button" style="position: absolute;right:0px;">
+            <i class="fa fa-cart-plus" style="font-size:30px"></i>
+        </a>
+    </div>
+    <script src="main.js"></script>
+    <script src="app.js"></script>
+    <script src="catpages/electronics.js"></script>
+
+</body>
+
+</html>
